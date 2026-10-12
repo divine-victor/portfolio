@@ -3,20 +3,30 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0e0d0b">
-<title>Divine Victor | Landing pages that make the next step obvious</title>
-<meta name="description" content="Divine Victor writes, designs and builds focused, responsive landing pages for businesses with one clear thing to sell.">
+<meta name="theme-color" content="#dfd4c0">
 <meta name="author" content="Divine Victor">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Divine Victor | Landing pages that make the next step obvious">
-<meta property="og:description" content="Focused landing pages, written, designed and built by one person.">
-<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://videos.pexels.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@1&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Divine Victor","jobTitle":"Landing page designer and web developer","url":"https://divine-victor.pages.dev/"}</script>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Figtree:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%238f3b20'/%3E%3Ctext x='16' y='22' font-size='18' text-anchor='middle' fill='%23fff8ec' font-family='Georgia'%3ED%3C/text%3E%3C/svg%3E">
+<title>Landing Page Designer for Authors | Divine Victor</title>
+<meta name="description" content="Divine Victor writes, designs and builds focused, responsive landing pages for authors and small businesses with one clear thing to sell.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://divine-victor.pages.dev/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Divine Victor">
+<meta property="og:title" content="Landing Page Designer for Authors | Divine Victor">
+<meta property="og:description" content="Divine Victor writes, designs and builds focused, responsive landing pages for authors and small businesses with one clear thing to sell.">
+<meta property="og:url" content="https://divine-victor.pages.dev/">
+<meta property="og:image" content="https://divine-victor.pages.dev/assets/og.png">
+<meta property="og:image:alt" content="Divine Victor, landing page designer and developer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Landing Page Designer for Authors | Divine Victor">
+<meta name="twitter:description" content="Divine Victor writes, designs and builds focused, responsive landing pages for authors and small businesses with one clear thing to sell.">
+<meta name="twitter:image" content="https://divine-victor.pages.dev/assets/og.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://divine-victor.pages.dev/#me", "name": "Divine Victor", "jobTitle": "Landing page designer and web developer", "url": "https://divine-victor.pages.dev/", "sameAs": ["https://www.facebook.com/profile.php?id=61594403357331"], "knowsAbout": ["Landing page design", "Book landing pages", "Web development"]}, {"@type": "WebSite", "@id": "https://divine-victor.pages.dev/#site", "url": "https://divine-victor.pages.dev/", "name": "Divine Victor", "publisher": {"@id": "https://divine-victor.pages.dev/#me"}}, {"@type": "ProfessionalService", "name": "Divine Victor", "url": "https://divine-victor.pages.dev/", "serviceType": "Landing page design and development", "founder": {"@id": "https://divine-victor.pages.dev/#me"}, "sameAs": ["https://www.facebook.com/profile.php?id=61594403357331"]}]}</script>
 </head>
 <body>
 <div class="bar" aria-hidden="true"></div>
@@ -24,10 +34,10 @@
 <header>
   <a class="brand" href="#top">Divine Victor</a>
   <nav aria-label="Primary navigation">
-    <a href="#work">Work</a>
-    <a href="#approach">Approach</a>
-    <a href="#process">Process</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
@@ -39,11 +49,11 @@
       aria-hidden="true">
       <source src="https://videos.pexels.com/video-files/7652720/7652720-hd_1920_1080_25fps.mp4" type="video/mp4">
     </video>
-    <div class="hero-noise" aria-hidden="true"></div>
+    <canvas class="gl" id="gl" aria-hidden="true"></canvas>
     <div class="dim"></div>
 
     <div class="hero-copy">
-      <p class="tag">Landing pages · design · development</p>
+      <p class="tag">Landing page design and development</p>
       <h1>Landing pages for people who have <em>one thing</em> to sell.</h1>
       <p class="sub">I write, design and build each page myself, so the words and the layout are made together.</p>
       <div class="hero-actions">
@@ -52,24 +62,21 @@
       </div>
     </div>
 
-    <div class="hero-meta" aria-hidden="true">
-      <span>Scroll to explore</span>
     </div>
-  </div>
 </section>
 
 <section class="track story" id="approach" aria-label="How I think about a landing page">
   <div class="stick">
-    <video class="visual-video" autoplay muted loop playsinline preload="metadata"
+    <video class="visual-video" autoplay muted loop playsinline preload="none"
       poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 9'%3E%3Crect width='16' height='9' fill='%2317120d'/%3E%3C/svg%3E"
       aria-hidden="true">
-      <source src="https://videos.pexels.com/video-files/34626856/14675479_3840_2160_24fps.mp4" type="video/mp4">
+      <source data-src="https://videos.pexels.com/video-files/34626856/14675479_3840_2160_24fps.mp4" type="video/mp4">
     </video>
     <div class="dim"></div>
 
     <div class="story-intro">
       <p class="tag">The approach</p>
-      <span>Good pages don't ask visitors to work.</span>
+      
     </div>
 
     <div class="ch"><p>Someone lands on your page. They don't know you, and they're in no hurry to find out.</p></div>
@@ -84,7 +91,7 @@
 
 <section class="pad work-section" id="work">
   <div class="section-head">
-    <p class="tag" data-r>Selected work</p>
+    <p class="tag" data-r>Work</p>
 
   </div>
   <h2 data-r>A book landing page for a <em>consultant-author.</em></h2>
@@ -102,22 +109,17 @@
         <div class="chrome" aria-hidden="true"><i></i><i></i><i></i><span>client-project.html</span></div>
         <iframe src="client-project.html#book" title="Preview of the consultant's book landing page" loading="lazy"></iframe>
       </div>
-      <p class="more" data-r><a href="client-project.html" target="_blank" rel="noopener">Open the full page ↗</a></p>
+      <p class="more" data-r><a class="button button-fill" href="work.html">All projects <span>→</span></a> &nbsp; <a href="client-project.html" target="_blank" rel="noopener">Open the full page ↗</a></p>
     </div>
   </div>
 
   <div class="honesty" data-r>
-    <span class="tag">No invented case studies</span>
-    <p>It's the only project here because it's the only one I've finished for someone else. I'd rather show one real page than fill this space with mock-ups.</p>
+    <span class="tag">About these examples</span>
+    <p>This is the one page I've finished for a client. Two sample pages built on published books are on the Work page, clearly labelled as samples.</p>
   </div>
 </section>
 
-<section class="dark-break" aria-hidden="true">
-  <div class="dark-break-bg"></div>
-  <div class="dark-break-copy">
-    <strong>One page.<br><em>Built to do a job.</em></strong>
-  </div>
-</section>
+<section class="track cine" aria-label="How a page comes together"><div class="stick"><canvas class="cine-gl" aria-hidden="true"></canvas><p class="cine-top">How a page comes together</p><div class="cine-ch"><span class="cl k">Gather</span><h3 class="cl">Everything you know about your book or offer, in one place.</h3><p class="cl">It starts scattered: copy, links, reviews, ideas.</p></div><div class="cine-ch"><span class="cl k">Shape</span><h3 class="cl">One clear message.</h3><p class="cl">The words come first, so the page knows what it is saying.</p></div><div class="cine-ch"><span class="cl k">Lay out</span><h3 class="cl">A layout that makes the next step obvious.</h3><p class="cl">A headline, some proof and one clear action, in that order.</p></div><div class="cine-ch"><span class="cl k">Build</span><h3 class="cl">Tested on every screen, then live.</h3><p class="cl">Plain HTML, CSS and JavaScript, checked on phones and desktops.</p></div><div class="cine-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div></section>
 
 <section class="pad process-section" id="process">
   <div class="section-head">
@@ -136,7 +138,7 @@
 <section class="capabilities pad">
   <div class="section-head">
     <p class="tag" data-r>What I handle</p>
-    <span class="section-index" data-r>FROM WORDS TO LIVE PAGE</span>
+    
   </div>
   <div class="cap-grid">
     <article data-r><h3>Message</h3><p>Headlines, section order and clear calls to action that give the page a job.</p></article>
@@ -151,17 +153,21 @@
     <p class="tag" data-r>Have something to sell?</p>
     <h2 data-r>Let's make the <em>next step</em> obvious.</h2>
     <p class="lead" data-r>Send me what you're selling, who it's for, and what you want the visitor to do. I'll tell you whether I can help and what I'd build first.</p>
-    <a class="mail" data-r href="mailto:divine.victor.com@gmail.com?subject=Landing%20page%20project">Start a project <span>↗</span></a>
-    <p class="contact-note" data-r>No form. No long brief. Just the basics.</p>
+    <a class="mail" data-r href="#contact" data-m="1" data-s="Landing%20page%20project">Start a project <span>↗</span></a>
+    <p class="contact-line" data-r><a href="https://www.facebook.com/profile.php?id=61594403357331" target="_blank" rel="noopener">Find me on Facebook</a></p>
   </div>
 </section>
 </main>
 
-<footer>
-  <span>© <span id="y"></span> Divine Victor</span>
+<section class="foot-video"><video class="fv-video" muted loop playsinline preload="none" aria-hidden="true"><source data-src="https://videos.pexels.com/video-files/852348/852348-hd_1920_1080_30fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/852348/852348-hd_1920_1080_25fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/852348/852348-hd_1920_1080_24fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/852348/852348-hd_1920_1080_50fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/852348/852348-hd_1920_1080_60fps.mp4" type="video/mp4"></video><div class="fv-dim"></div><div class="fv-copy"><h2>Have a page in mind?</h2><a class="button button-fill" href="#contact" data-m="1" data-s="Landing%20page%20project">Email me <span>→</span></a></div></section>
+<footer><span>© <span id="y"></span> Divine Victor</span><nav aria-label="Footer"><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="#contact" data-m="1">Email</a><a href="https://www.facebook.com/profile.php?id=61594403357331" target="_blank" rel="noopener">Facebook</a></nav></footer>
 
-</footer>
-
-<script src="script.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+<script defer src="js/script.js"></script>
+<script defer src="js/anim.js"></script>
+<script defer src="js/cine.js"></script>
 </body>
 </html>

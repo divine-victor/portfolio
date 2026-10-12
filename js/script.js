@@ -84,3 +84,7 @@ if(hero && !rm){
     if(heroVideo) heroVideo.style.setProperty("--hero-progress",p);
   },{passive:true});
 }
+
+document.querySelectorAll("[data-m]").forEach(a=>{a.href="mailto:"+atob("ZGl2aW5lLnZpY3Rvci5jb21AZ21haWwuY29t")+(a.dataset.s?"?subject="+a.dataset.s:"")});
+
+document.querySelectorAll(".fv-video").forEach(v=>v.addEventListener("timeupdate",()=>{if(v.currentTime>=10)v.currentTime=0}));
