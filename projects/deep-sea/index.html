@@ -84,12 +84,11 @@
         .nav-links a:not(.btn):hover { opacity: 1; color: var(--lantern); }
         .mobile-menu-btn { display: none; background: none; border: none; color: var(--fog); font-size: 1.5rem; cursor: pointer; z-index: 1001; }
 
-        /* HERO — heavier initial blur */
         .hero { height: 100vh; min-height: 600px; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
         .hero-video {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             object-fit: cover; z-index: 1;
-            filter: brightness(0.3) saturate(0.7) blur(8px); /* deeper initial blur */
+            filter: brightness(0.3) saturate(0.7) blur(8px);
             opacity: 0;
             transition: opacity 1.5s ease, filter 1.2s var(--ease-lens);
         }
@@ -101,16 +100,15 @@
         .hero p { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--fog); max-width: 600px; margin: 0 auto 2.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.8); }
         .hero-cta { display: flex; gap: 1rem; justify-content: center; }
 
-        /* RACK FOCUS (B2F) — heavier blur values */
         .rack-focus {
             opacity: 0; transform: translateY(30px) scale(0.98);
-            filter: blur(14px); /* heavier media blur */
+            filter: blur(14px);
             transition: opacity 1.2s ease, transform 1.2s var(--ease-lens), filter 1.2s var(--ease-lens);
             will-change: opacity, transform, filter;
         }
         .rack-focus-text {
             opacity: 0; transform: translateY(20px);
-            filter: blur(8px); /* text still readable sooner */
+            filter: blur(8px);
             transition: opacity 1s ease, transform 1s var(--ease-lens), filter 1s var(--ease-lens);
         }
         .rack-focus.active, .rack-focus-text.active { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
@@ -151,9 +149,19 @@
         .tag { padding: 0.5rem 1.5rem; border: 1px solid rgba(78, 146, 127, 0.3); border-radius: 50px; font-size: 0.85rem; color: var(--emerald); transition: all 0.3s ease; }
         .tag:hover { background: rgba(78, 146, 127, 0.1); border-color: var(--emerald); }
 
-        .author-layout { display: grid; grid-template-columns: 250px 1fr; gap: 4rem; align-items: center; }
-        .author-image { width: 100%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; border: 2px solid var(--emerald); padding: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .author-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; filter: grayscale(20%) contrast(1.1); }
+        .author-layout { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; align-items: center; }
+        .author-image { 
+            width: 100%; aspect-ratio: 1; border-radius: 50%; overflow: hidden; 
+            border: 2px solid var(--emerald); padding: 6px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: var(--deep-ocean);
+        }
+        .author-image img { 
+            width: 100%; height: 100%; 
+            object-fit: cover; 
+            object-position: center 25%;
+            border-radius: 50%; 
+            filter: brightness(0.85) contrast(1.1) sepia(0.2) hue-rotate(140deg);
+        }
         .author-text h3 { font-size: 2rem; margin-bottom: 0.2rem; }
         .author-text .chinese-name { font-size: 1.1rem; color: var(--emerald); margin-bottom: 1.5rem; display: block; }
         .author-text p { margin-bottom: 1.5rem; color: #9aa7a2; font-size: 1rem; line-height: 1.7; }
@@ -168,12 +176,11 @@
         .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 4px; background: #fff; }
         .signup-privacy { margin-top: 1.5rem; font-size: 0.8rem; letter-spacing: 0.05em; color: #5a6662; }
 
-        /* FINAL CTA — heavier initial blur */
         .final-cta { height: 80vh; min-height: 550px; position: relative; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
         .final-video {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             object-fit: cover; z-index: 1;
-            filter: brightness(0.25) saturate(0.6) blur(6px); /* deeper initial blur */
+            filter: brightness(0.25) saturate(0.6) blur(6px);
             opacity: 0;
             transition: opacity 1.5s ease, filter 1.2s var(--ease-lens);
         }
@@ -192,7 +199,7 @@
             .world-grid { grid-template-columns: 1fr 1fr; }
             .character-grid { grid-template-columns: 1fr; }
             .author-layout { grid-template-columns: 1fr; text-align: center; gap: 2rem; }
-            .author-image { max-width: 220px; margin: 0 auto; }
+            .author-image { max-width: 240px; margin: 0 auto; }
             .works-list { text-align: left; justify-content: center; max-width: 400px; margin: 0 auto; }
         }
         @media (max-width: 768px) {
@@ -238,7 +245,6 @@
 
     <main id="main-content">
         
-        <!-- HERO — Ghost ship in rough seas -->
         <header class="hero">
             <video class="hero-video" autoplay muted loop playsinline preload="none" data-src="https://videos.pexels.com/video-files/39803595/39803595-hd_1920_1080_30fps.mp4" poster="https://res.cloudinary.com/jerrick/image/upload/v1732880577/6749a8c190abc5001d8e316e.webp" aria-hidden="true">
             </video>
@@ -337,7 +343,7 @@
             <div class="container">
                 <div class="author-layout">
                     <div class="author-image rack-focus">
-                        <img src="https://pbs.twimg.com/media/GpzzoGyWAAE4Fjh.jpg" alt="Yuan Tong Author Portrait" loading="lazy" width="250" height="250" style="object-position: top;">
+                        <img src="assets/author.jpg" alt="Yuan Tong Author Portrait" loading="lazy">
                     </div>
                     <div class="author-text rack-focus-text delay-1">
                         <div class="section-title" style="margin-bottom: 0.5rem;">A WORLD CREATED BY YUAN TONG</div>
@@ -376,7 +382,6 @@
             </div>
         </section>
 
-        <!-- FINAL CTA — Lighthouse in a storm -->
         <section class="final-cta">
             <video class="final-video" autoplay muted loop playsinline preload="none" data-src="https://videos.pexels.com/video-files/20653446/20653446-hd_1920_1080_30fps.mp4" poster="https://res.cloudinary.com/jerrick/image/upload/v1732880577/6749a8c190abc5001d8e316e.webp" aria-hidden="true">
             </video>
@@ -418,7 +423,6 @@
             });
         });
 
-        // Rack Focus Observer
         const rackElements = document.querySelectorAll('.rack-focus, .rack-focus-text');
         if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             const rackObserver = new IntersectionObserver((entries) => {
@@ -437,7 +441,6 @@
             rackElements.forEach(el => el.classList.add('active'));
         }
 
-        // Lazy Load Videos (Pexels)
         const videos = document.querySelectorAll('video[data-src]');
         const videoObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -453,7 +456,6 @@
         }, { rootMargin: '200px' });
         videos.forEach(v => videoObserver.observe(v));
 
-        // Lazy Load Brevo
         const brevoContainer = document.getElementById('brevo-container');
         const iframe = brevoContainer.querySelector('iframe');
         const iframeObserver = new IntersectionObserver((entries) => {
@@ -464,13 +466,12 @@
         }, { rootMargin: '200px' });
         iframeObserver.observe(brevoContainer);
 
-        // Heavy Rack Focus on Hero Scroll
         const heroVideo = document.querySelector('.hero-video');
         if (heroVideo) {
             window.addEventListener('scroll', () => {
                 const scrollY = window.scrollY;
                 if (scrollY < window.innerHeight) {
-                    const blurAmount = Math.min(scrollY / 25, 16); // heavier, faster
+                    const blurAmount = Math.min(scrollY / 25, 16);
                     const opacityAmount = Math.max(1 - (scrollY / 800), 0.3);
                     heroVideo.style.filter = `brightness(${0.3 - scrollY/3000}) saturate(0.7) blur(${blurAmount}px)`;
                     heroVideo.style.opacity = opacityAmount;
@@ -478,7 +479,6 @@
             }, { passive: true });
         }
 
-        // Rack Focus on Footer Video Scroll
         const finalVideo = document.querySelector('.final-video');
         const finalCta = document.querySelector('.final-cta');
         if (finalVideo && finalCta) {
@@ -487,7 +487,6 @@
                 const viewportH = window.innerHeight;
                 if (rect.top < viewportH && rect.bottom > 0) {
                     const progress = Math.max(0, Math.min(1, (viewportH - rect.top) / (viewportH + rect.height)));
-                    // Sharpen as it enters, soften as it leaves
                     const blurAmount = Math.max(0, 6 - (progress * 6));
                     finalVideo.style.filter = `brightness(0.25) saturate(0.6) blur(${blurAmount}px)`;
                 }
