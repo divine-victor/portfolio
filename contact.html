@@ -43,10 +43,57 @@
 <main id="top">
 <section class="wk-hero vhero"><video class="vh-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="https://videos.pexels.com/video-files/946146/946146-hd_1920_1080_30fps.mp4" type="video/mp4"><source src="https://videos.pexels.com/video-files/946146/946146-hd_1920_1080_25fps.mp4" type="video/mp4"><source src="https://videos.pexels.com/video-files/946146/946146-hd_1920_1080_24fps.mp4" type="video/mp4"><source src="https://videos.pexels.com/video-files/946146/946146-hd_1920_1080_50fps.mp4" type="video/mp4"><source src="https://videos.pexels.com/video-files/946146/946146-hd_1920_1080_60fps.mp4" type="video/mp4"></video><div class="vh-dim"></div><div class="vh-in"><p class="tag">Contact</p><h1>Tell me about <em>your book or offer.</em></h1><p class="lead">Send me what you're selling, who it's for, and what you want the visitor to do. I'll tell you whether I can help and what I'd build first.</p></div></section>
 <section class="track cine" aria-label="What happens after you write"><div class="stick"><canvas class="cine-gl" aria-hidden="true"></canvas><p class="cine-top">What happens after you write</p><div class="cine-ch"><span class="cl k">You send the basics</span><h3 class="cl">What you sell, who buys it, and any copy or links you already have.</h3><p class="cl">A few lines is enough to start.</p></div><div class="cine-ch"><span class="cl k">I send an outline</span><h3 class="cl">Headline and sections in plain text.</h3><p class="cl">You approve it before I design anything.</p></div><div class="cine-ch"><span class="cl k">I build and check it</span><h3 class="cl">I test every screen size myself.</h3><p class="cl">Then you review it and I fix what is off.</p></div><div class="cine-ch"><span class="cl k">It goes live</span><h3 class="cl">You get the files, or I help you put it online.</h3><p class="cl">On your own domain and hosting.</p></div><div class="cine-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div></section>
-<section class="about-grid" id="contact"><h2 data-r>Ways to reach me</h2><div data-r><p>Email is best. Include what you sell, who buys it, what you want visitors to do, and any copy or links you already have.</p><p><a class="button button-fill" href="#contact" data-m="1" data-s="Landing%20page%20project">Email me <span>→</span></a> &nbsp; <a class="button" href="https://www.facebook.com/profile.php?id=61594403357331" target="_blank" rel="noopener">Facebook <span>↗</span></a></p></div></section>
+
+<!-- UPDATED CONTACT SECTION -->
+<section class="about-grid" id="contact">
+  <h2 data-r>Start a project</h2>
+  <div data-r>
+    <p>Tell me what you sell, who buys it, and what you want visitors to do. A few lines is enough — you'll get an outline before any design starts.</p>
+
+    <form class="capture" id="capture-form" novalidate>
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe" required>
+      </div>
+
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@example.com" required>
+      </div>
+
+      <div class="field field--full">
+        <label for="project">What are you selling?</label>
+        <select id="project" name="project" required>
+          <option value="" disabled selected>Choose one</option>
+          <option value="book">A book</option>
+          <option value="series">A book series</option>
+          <option value="course">A course or offer</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+
+      <div class="field field--full">
+        <label for="message">Who is it for, and what should the visitor do?</label>
+        <textarea id="message" name="message" rows="4" placeholder="Readers of dark fantasy, 25–45. I want them to grab a free prequel and then buy the paid book." required></textarea>
+      </div>
+
+      <div class="field field--full form-actions">
+        <button type="submit" class="button button-fill">Send it <span>→</span></button>
+      </div>
+      
+      <!-- Optional: Keep the Facebook link as a secondary contact method -->
+      <div class="field field--full">
+        <p class="form-note">Prefer social? <a href="https://www.facebook.com/profile.php?id=61594403357331" target="_blank" rel="noopener">Message me on Facebook ↗</a></p>
+      </div>
+
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
 </main>
-<section class="foot-video"><video class="fv-video" muted loop playsinline preload="none" aria-hidden="true"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_25fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_30fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_24fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_50fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_60fps.mp4" type="video/mp4"></video><div class="fv-dim"></div><div class="fv-copy"><h2>Have a page in mind?</h2><a class="button button-fill" href="#contact" data-m="1" data-s="Landing%20page%20project">Email me <span>→</span></a></div></section>
-<footer><span>© <span id="y"></span> Divine Victor</span><nav aria-label="Footer"><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="#contact" data-m="1">Email</a><a href="https://www.facebook.com/profile.php?id=61594403357331" target="_blank" rel="noopener">Facebook</a></nav></footer>
+<section class="foot-video"><video class="fv-video" muted loop playsinline preload="none" aria-hidden="true"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_25fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_30fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_24fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_50fps.mp4" type="video/mp4"><source data-src="https://videos.pexels.com/video-files/854182/854182-hd_1920_1080_60fps.mp4" type="video/mp4"></video><div class="fv-dim"></div><div class="fv-copy"><h2>Have a page in mind?</h2><a class="button button-fill" href="#contact">Start a project <span>→</span></a></div></section>
+<footer><span>© <span id="y"></span> Divine Victor</span><nav aria-label="Footer"><a href="work.html">Work</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="#contact">Email</a><a href="https://www.facebook.com/profile.php?id=61594403357331" target="_blank" rel="noopener">Facebook</a></nav></footer>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
