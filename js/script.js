@@ -88,3 +88,65 @@ if(hero && !rm){
 document.querySelectorAll("[data-m]").forEach(a=>{a.href="mailto:"+atob("ZGl2aW5lLnZpY3Rvci5jb21AZ21haWwuY29t")+(a.dataset.s?"?subject="+a.dataset.s:"")});
 
 document.querySelectorAll(".fv-video").forEach(v=>v.addEventListener("timeupdate",()=>{if(v.currentTime>=10)v.currentTime=0}));
+
+
+/* ============ Brevo Capture Form Logic ============ */
+(function () {
+  const form = document.getElementById('capture-form');
+  if (!form) return;
+
+  const status = document.getElementById('form-status');
+  const btn = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // 1. Gather data
+    const data = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      project: form.project.value,
+      message: form.message.value.trim()
+    };
+
+    // 2. Validate
+    if (!data.name || !data.email || !data.project || !data.message) {
+      status.textContent = 'Please fill in every field.';
+      status.className = 'form-status is-err';
+      return;
+    }
+
+    // 3. Button loading state
+    btn.disabled = true;
+    const originalText = btn.innerHTML;
+    btn.textContent = 'Sending…';
+    status.textContent = '';
+    status.className = 'form-status';
+    
+    try {
+      // 4. Send to Cloudflare Function
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      const json = await res.json().catch(() => ({}));
+
+      if (!res.ok || !json.ok) throw new Error(json.error || 'Failed');
+
+      // 5. Success!
+      status.textContent = 'Got it. I’ll reply from divine.victor.com@gmail.com within a day.';
+      status.className = 'form-status is-ok';
+      form.reset();
+    } catch (err) {
+      // 6. Error
+      status.textContent = 'Something broke. Email me directly at divine.victor.com@gmail.com.';
+      status.className = 'form-status is-err';
+    } finally {
+      // 7. Reset button
+      btn.disabled = false;
+      btn.innerHTML = originalText;
+    }
+  });
+})();
